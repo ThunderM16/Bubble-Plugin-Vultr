@@ -1,0 +1,13 @@
+{
+    "categories": {
+        "0": "small business",
+        "1": "data (things)",
+        "2": "productivity",
+        "3": "ecommerce"
+    },
+    "description": "Vultr API v2 Integration into bubble.io",
+    "image": "//s3.amazonaws.com/appforest_uf/f1648224222382x757852198954579200/signet__on-white.svg",
+    "license": "open_source",
+    "link": "https://www.vultr.com/api/#section/Introduction",
+    "name": "Vultr"
+}

@@ -1,0 +1,342 @@
+{
+    "auth": "private_key_header",
+    "calls": {
+        "AAD": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get Account Info",
+            "publish_as": "data",
+            "rank": 0,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAD",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAD\":{\"caption\":\"cURL Call\",\"fields\":{\"_p_account.balance\":{\"ret_value\":\"number\",\"caption\":\"account balance\",\"sample_value\":-53.5,\"path\":[\"account\",\"balance\"]},\"_p_account.pending_charges\":{\"ret_value\":\"number\",\"caption\":\"account pending_charges\",\"sample_value\":18.66,\"path\":[\"account\",\"pending_charges\"]},\"_p_account.name\":{\"ret_value\":\"text\",\"caption\":\"account name\",\"sample_value\":\"Storm Moran\",\"path\":[\"account\",\"name\"]},\"_p_account.email\":{\"ret_value\":\"text\",\"caption\":\"account email\",\"sample_value\":\"shoppmonster@protonmail.com\",\"path\":[\"account\",\"email\"]},\"_p_account.acls\":{\"ret_value\":\"list.text\",\"caption\":\"account acls\",\"sample_value\":\"manage_users\",\"path\":[\"account\",\"acls\"]},\"_p_account.last_payment_date\":{\"ret_value\":\"text\",\"caption\":\"account last_payment_date\",\"sample_value\":\"2022-02-28T13:25:12+00:00\",\"path\":[\"account\",\"last_payment_date\"]},\"_p_account.last_payment_amount\":{\"ret_value\":\"number\",\"caption\":\"account last_payment_amount\",\"sample_value\":-30,\"path\":[\"account\",\"last_payment_amount\"]}}}}",
+            "url": "https://api.vultr.com/v2/account"
+        },
+        "AAF": {
+            "initialized": true,
+            "method": "get",
+            "name": "List Applications",
+            "publish_as": "data",
+            "rank": 1,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAF",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAF\":{\"caption\":\"List Application\",\"fields\":{\"_p_applications\":{\"ret_value\":\"list.api.1648224112234x903820035073245200.plugin_api.AAF.applications\",\"caption\":\"applications\",\"path\":[\"applications\"]},\"_p_meta.total\":{\"ret_value\":\"number\",\"caption\":\"meta total\",\"sample_value\":61,\"path\":[\"meta\",\"total\"]},\"_p_meta.links.next\":{\"ret_value\":\"text\",\"caption\":\"meta links next\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"next\"]},\"_p_meta.links.prev\":{\"ret_value\":\"text\",\"caption\":\"meta links prev\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"prev\"]}}},\"plugin_api.AAF.applications\":{\"caption\":\"List Applications application\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":2,\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"WordPress\",\"path\":[\"name\"]},\"_p_short_name\":{\"ret_value\":\"text\",\"caption\":\"short_name\",\"sample_value\":\"wordpress\",\"path\":[\"short_name\"]},\"_p_deploy_name\":{\"ret_value\":\"text\",\"caption\":\"deploy_name\",\"sample_value\":\"WordPress on Ubuntu 20.04 x64\",\"path\":[\"deploy_name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"one-click\",\"path\":[\"type\"]},\"_p_vendor\":{\"ret_value\":\"text\",\"caption\":\"vendor\",\"sample_value\":\"vultr\",\"path\":[\"vendor\"]},\"_p_image_id\":{\"ret_value\":\"text\",\"caption\":\"image_id\",\"sample_value\":\"\",\"path\":[\"image_id\"]}}}}",
+            "url": "https://api.vultr.com/v2/applications"
+        },
+        "AAG": {
+            "initialized": true,
+            "method": "get",
+            "name": "List Backups",
+            "publish_as": "data",
+            "rank": 2,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAG",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAG\":{\"caption\":\"List Backup\",\"fields\":{\"_p_meta.total\":{\"ret_value\":\"number\",\"caption\":\"meta total\",\"sample_value\":0,\"path\":[\"meta\",\"total\"]},\"_p_meta.links.next\":{\"ret_value\":\"text\",\"caption\":\"meta links next\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"next\"]},\"_p_meta.links.prev\":{\"ret_value\":\"text\",\"caption\":\"meta links prev\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"prev\"]}}}}",
+            "url": "https://api.vultr.com/v2/backups"
+        },
+        "AAH": {
+            "initialized": false,
+            "method": "get",
+            "name": "Get Backups",
+            "publish_as": "data",
+            "rank": 3,
+            "should_reinitialize": true,
+            "url": "https://api.vultr.com/v2/backups/[backupID]",
+            "url_params": {
+                "AAI": {
+                    "doc": "",
+                    "key": "backupID",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "AAJ": {
+            "initialized": true,
+            "method": "get",
+            "name": "List Bare Metal Instances",
+            "publish_as": "data",
+            "rank": 4,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAJ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAJ\":{\"caption\":\"List Bare Metal Instance\",\"fields\":{\"_p_bare_metals\":{\"ret_value\":\"list.api.1648224112234x903820035073245200.plugin_api.AAJ.bare_metals\",\"caption\":\"bare_metals\",\"path\":[\"bare_metals\"]},\"_p_meta.total\":{\"ret_value\":\"number\",\"caption\":\"meta total\",\"sample_value\":1,\"path\":[\"meta\",\"total\"]},\"_p_meta.links.next\":{\"ret_value\":\"text\",\"caption\":\"meta links next\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"next\"]},\"_p_meta.links.prev\":{\"ret_value\":\"text\",\"caption\":\"meta links prev\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"prev\"]}}},\"plugin_api.AAJ.bare_metals\":{\"caption\":\"List Bare Metal Instances bare_metal\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"1a0eabc5-65b3-4866-a9c1-1f8302ee7e84\",\"path\":[\"id\"]},\"_p_os\":{\"ret_value\":\"text\",\"caption\":\"os\",\"sample_value\":\"Application\",\"path\":[\"os\"]},\"_p_ram\":{\"ret_value\":\"text\",\"caption\":\"ram\",\"sample_value\":\"32768 MB\",\"path\":[\"ram\"]},\"_p_disk\":{\"ret_value\":\"text\",\"caption\":\"disk\",\"sample_value\":\"2x 240GB SSD\",\"path\":[\"disk\"]},\"_p_main_ip\":{\"ret_value\":\"text\",\"caption\":\"main_ip\",\"sample_value\":\"95.179.156.214\",\"path\":[\"main_ip\"]},\"_p_cpu_count\":{\"ret_value\":\"number\",\"caption\":\"cpu_count\",\"sample_value\":4,\"path\":[\"cpu_count\"]},\"_p_region\":{\"ret_value\":\"text\",\"caption\":\"region\",\"sample_value\":\"ams\",\"path\":[\"region\"]},\"_p_date_created\":{\"ret_value\":\"text\",\"caption\":\"date_created\",\"sample_value\":\"2022-03-25T16:33:57+00:00\",\"path\":[\"date_created\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"pending\",\"path\":[\"status\"]},\"_p_netmask_v4\":{\"ret_value\":\"text\",\"caption\":\"netmask_v4\",\"sample_value\":\"255.255.254.0\",\"path\":[\"netmask_v4\"]},\"_p_gateway_v4\":{\"ret_value\":\"text\",\"caption\":\"gateway_v4\",\"sample_value\":\"95.179.156.1\",\"path\":[\"gateway_v4\"]},\"_p_plan\":{\"ret_value\":\"text\",\"caption\":\"plan\",\"sample_value\":\"vbm-4c-32gb\",\"path\":[\"plan\"]},\"_p_v6_network\":{\"ret_value\":\"text\",\"caption\":\"v6_network\",\"sample_value\":\"2001:19f0:5001:28ab::\",\"path\":[\"v6_network\"]},\"_p_v6_main_ip\":{\"ret_value\":\"text\",\"caption\":\"v6_main_ip\",\"sample_value\":\"2001:19f0:5001:28ab:0ec4:7aff:fe8e:f9ed\",\"path\":[\"v6_main_ip\"]},\"_p_v6_network_size\":{\"ret_value\":\"number\",\"caption\":\"v6_network_size\",\"sample_value\":64,\"path\":[\"v6_network_size\"]},\"_p_label\":{\"ret_value\":\"text\",\"caption\":\"label\",\"sample_value\":\"Example Bare Metal\",\"path\":[\"label\"]},\"_p_tag\":{\"ret_value\":\"text\",\"caption\":\"tag\",\"sample_value\":\"\",\"path\":[\"tag\"]},\"_p_mac_address\":{\"ret_value\":\"number\",\"caption\":\"mac_address\",\"sample_value\":14038009313773,\"path\":[\"mac_address\"]},\"_p_os_id\":{\"ret_value\":\"number\",\"caption\":\"os_id\",\"sample_value\":186,\"path\":[\"os_id\"]},\"_p_app_id\":{\"ret_value\":\"number\",\"caption\":\"app_id\",\"sample_value\":3,\"path\":[\"app_id\"]},\"_p_image_id\":{\"ret_value\":\"text\",\"caption\":\"image_id\",\"sample_value\":\"\",\"path\":[\"image_id\"]},\"_p_features\":{\"ret_value\":\"list.text\",\"caption\":\"features\",\"sample_value\":\"ipv6\",\"path\":[\"features\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals"
+        },
+        "AAL": {
+            "body": "{\n    \"region\": \"ams\",\n    \"plan\": \"vbm-4c-32gb\",\n    \"label\": \"Example Bare Metal\",\n    \"app_id\": 3,\n    \"enable_ipv6\": true\n}",
+            "headers": {
+                "0": {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Create Bare Metal Instance",
+            "publish_as": "data",
+            "rank": 5,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAL",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAL\":{\"caption\":\"Create Bare Metal Instance\",\"fields\":{\"_p_bare_metal.id\":{\"ret_value\":\"text\",\"caption\":\"bare_metal id\",\"sample_value\":\"1a0eabc5-65b3-4866-a9c1-1f8302ee7e84\",\"path\":[\"bare_metal\",\"id\"]},\"_p_bare_metal.os\":{\"ret_value\":\"text\",\"caption\":\"bare_metal os\",\"sample_value\":\"Application\",\"path\":[\"bare_metal\",\"os\"]},\"_p_bare_metal.ram\":{\"ret_value\":\"text\",\"caption\":\"bare_metal ram\",\"sample_value\":\"32768 MB\",\"path\":[\"bare_metal\",\"ram\"]},\"_p_bare_metal.disk\":{\"ret_value\":\"text\",\"caption\":\"bare_metal disk\",\"sample_value\":\"2x 240GB SSD\",\"path\":[\"bare_metal\",\"disk\"]},\"_p_bare_metal.main_ip\":{\"ret_value\":\"text\",\"caption\":\"bare_metal main_ip\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"main_ip\"]},\"_p_bare_metal.cpu_count\":{\"ret_value\":\"number\",\"caption\":\"bare_metal cpu_count\",\"sample_value\":4,\"path\":[\"bare_metal\",\"cpu_count\"]},\"_p_bare_metal.region\":{\"ret_value\":\"text\",\"caption\":\"bare_metal region\",\"sample_value\":\"ams\",\"path\":[\"bare_metal\",\"region\"]},\"_p_bare_metal.date_created\":{\"ret_value\":\"text\",\"caption\":\"bare_metal date_created\",\"sample_value\":\"2022-03-25T16:33:57+00:00\",\"path\":[\"bare_metal\",\"date_created\"]},\"_p_bare_metal.status\":{\"ret_value\":\"text\",\"caption\":\"bare_metal status\",\"sample_value\":\"pending\",\"path\":[\"bare_metal\",\"status\"]},\"_p_bare_metal.netmask_v4\":{\"ret_value\":\"text\",\"caption\":\"bare_metal netmask_v4\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"netmask_v4\"]},\"_p_bare_metal.gateway_v4\":{\"ret_value\":\"text\",\"caption\":\"bare_metal gateway_v4\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"gateway_v4\"]},\"_p_bare_metal.plan\":{\"ret_value\":\"text\",\"caption\":\"bare_metal plan\",\"sample_value\":\"vbm-4c-32gb\",\"path\":[\"bare_metal\",\"plan\"]},\"_p_bare_metal.v6_network\":{\"ret_value\":\"text\",\"caption\":\"bare_metal v6_network\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"v6_network\"]},\"_p_bare_metal.v6_main_ip\":{\"ret_value\":\"text\",\"caption\":\"bare_metal v6_main_ip\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"v6_main_ip\"]},\"_p_bare_metal.v6_network_size\":{\"ret_value\":\"number\",\"caption\":\"bare_metal v6_network_size\",\"sample_value\":0,\"path\":[\"bare_metal\",\"v6_network_size\"]},\"_p_bare_metal.label\":{\"ret_value\":\"text\",\"caption\":\"bare_metal label\",\"sample_value\":\"Example Bare Metal\",\"path\":[\"bare_metal\",\"label\"]},\"_p_bare_metal.tag\":{\"ret_value\":\"text\",\"caption\":\"bare_metal tag\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"tag\"]},\"_p_bare_metal.mac_address\":{\"ret_value\":\"number\",\"caption\":\"bare_metal mac_address\",\"sample_value\":0,\"path\":[\"bare_metal\",\"mac_address\"]},\"_p_bare_metal.os_id\":{\"ret_value\":\"number\",\"caption\":\"bare_metal os_id\",\"sample_value\":186,\"path\":[\"bare_metal\",\"os_id\"]},\"_p_bare_metal.app_id\":{\"ret_value\":\"number\",\"caption\":\"bare_metal app_id\",\"sample_value\":3,\"path\":[\"bare_metal\",\"app_id\"]},\"_p_bare_metal.image_id\":{\"ret_value\":\"text\",\"caption\":\"bare_metal image_id\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"image_id\"]},\"_p_bare_metal.default_password\":{\"ret_value\":\"text\",\"caption\":\"bare_metal default_password\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"default_password\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals"
+        },
+        "AAM": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get Bare Metal",
+            "publish_as": "data",
+            "rank": 6,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAM",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAM\":{\"caption\":\"Get Bare Metal\",\"fields\":{\"_p_bare_metal.id\":{\"ret_value\":\"text\",\"caption\":\"bare_metal id\",\"sample_value\":\"1a0eabc5-65b3-4866-a9c1-1f8302ee7e84\",\"path\":[\"bare_metal\",\"id\"]},\"_p_bare_metal.os\":{\"ret_value\":\"text\",\"caption\":\"bare_metal os\",\"sample_value\":\"Application\",\"path\":[\"bare_metal\",\"os\"]},\"_p_bare_metal.ram\":{\"ret_value\":\"text\",\"caption\":\"bare_metal ram\",\"sample_value\":\"32768 MB\",\"path\":[\"bare_metal\",\"ram\"]},\"_p_bare_metal.disk\":{\"ret_value\":\"text\",\"caption\":\"bare_metal disk\",\"sample_value\":\"2x 240GB SSD\",\"path\":[\"bare_metal\",\"disk\"]},\"_p_bare_metal.main_ip\":{\"ret_value\":\"text\",\"caption\":\"bare_metal main_ip\",\"sample_value\":\"95.179.156.214\",\"path\":[\"bare_metal\",\"main_ip\"]},\"_p_bare_metal.cpu_count\":{\"ret_value\":\"number\",\"caption\":\"bare_metal cpu_count\",\"sample_value\":4,\"path\":[\"bare_metal\",\"cpu_count\"]},\"_p_bare_metal.region\":{\"ret_value\":\"text\",\"caption\":\"bare_metal region\",\"sample_value\":\"ams\",\"path\":[\"bare_metal\",\"region\"]},\"_p_bare_metal.date_created\":{\"ret_value\":\"text\",\"caption\":\"bare_metal date_created\",\"sample_value\":\"2022-03-25T16:33:57+00:00\",\"path\":[\"bare_metal\",\"date_created\"]},\"_p_bare_metal.status\":{\"ret_value\":\"text\",\"caption\":\"bare_metal status\",\"sample_value\":\"pending\",\"path\":[\"bare_metal\",\"status\"]},\"_p_bare_metal.netmask_v4\":{\"ret_value\":\"text\",\"caption\":\"bare_metal netmask_v4\",\"sample_value\":\"255.255.254.0\",\"path\":[\"bare_metal\",\"netmask_v4\"]},\"_p_bare_metal.gateway_v4\":{\"ret_value\":\"text\",\"caption\":\"bare_metal gateway_v4\",\"sample_value\":\"95.179.156.1\",\"path\":[\"bare_metal\",\"gateway_v4\"]},\"_p_bare_metal.plan\":{\"ret_value\":\"text\",\"caption\":\"bare_metal plan\",\"sample_value\":\"vbm-4c-32gb\",\"path\":[\"bare_metal\",\"plan\"]},\"_p_bare_metal.v6_network\":{\"ret_value\":\"text\",\"caption\":\"bare_metal v6_network\",\"sample_value\":\"2001:19f0:5001:28ab::\",\"path\":[\"bare_metal\",\"v6_network\"]},\"_p_bare_metal.v6_main_ip\":{\"ret_value\":\"text\",\"caption\":\"bare_metal v6_main_ip\",\"sample_value\":\"2001:19f0:5001:28ab:0ec4:7aff:fe8e:f9ed\",\"path\":[\"bare_metal\",\"v6_main_ip\"]},\"_p_bare_metal.v6_network_size\":{\"ret_value\":\"number\",\"caption\":\"bare_metal v6_network_size\",\"sample_value\":64,\"path\":[\"bare_metal\",\"v6_network_size\"]},\"_p_bare_metal.label\":{\"ret_value\":\"text\",\"caption\":\"bare_metal label\",\"sample_value\":\"Example Bare Metal\",\"path\":[\"bare_metal\",\"label\"]},\"_p_bare_metal.tag\":{\"ret_value\":\"text\",\"caption\":\"bare_metal tag\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"tag\"]},\"_p_bare_metal.mac_address\":{\"ret_value\":\"number\",\"caption\":\"bare_metal mac_address\",\"sample_value\":14038009313773,\"path\":[\"bare_metal\",\"mac_address\"]},\"_p_bare_metal.os_id\":{\"ret_value\":\"number\",\"caption\":\"bare_metal os_id\",\"sample_value\":186,\"path\":[\"bare_metal\",\"os_id\"]},\"_p_bare_metal.app_id\":{\"ret_value\":\"number\",\"caption\":\"bare_metal app_id\",\"sample_value\":3,\"path\":[\"bare_metal\",\"app_id\"]},\"_p_bare_metal.image_id\":{\"ret_value\":\"text\",\"caption\":\"bare_metal image_id\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"image_id\"]},\"_p_bare_metal.features\":{\"ret_value\":\"list.text\",\"caption\":\"bare_metal features\",\"sample_value\":\"ipv6\",\"path\":[\"bare_metal\",\"features\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]",
+            "url_params": {
+                "AAN": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAO": {
+            "body": "{\n    \"{\\n    \\\"label\\\" : \\\"Updated Bare Metal Label\\\",\\n    \\\"tag\\\" : \\\"Updated Tag\\\",\\n    \\\"user_data\\\" : \\\"QmFzZTY0IEV4YW1wbGUgRGF0YQ\": \"=\\\"\\n  }\"\n}",
+            "headers": {
+                "0": {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }
+            },
+            "initialized": true,
+            "method": "patch",
+            "name": "Update Bare Metal",
+            "publish_as": "data",
+            "rank": 7,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAO",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAO\":{\"caption\":\"Update Bare Metal\",\"fields\":{\"_p_bare_metal.id\":{\"ret_value\":\"text\",\"caption\":\"bare_metal id\",\"sample_value\":\"1a0eabc5-65b3-4866-a9c1-1f8302ee7e84\",\"path\":[\"bare_metal\",\"id\"]},\"_p_bare_metal.os\":{\"ret_value\":\"text\",\"caption\":\"bare_metal os\",\"sample_value\":\"Application\",\"path\":[\"bare_metal\",\"os\"]},\"_p_bare_metal.ram\":{\"ret_value\":\"text\",\"caption\":\"bare_metal ram\",\"sample_value\":\"32768 MB\",\"path\":[\"bare_metal\",\"ram\"]},\"_p_bare_metal.disk\":{\"ret_value\":\"text\",\"caption\":\"bare_metal disk\",\"sample_value\":\"2x 240GB SSD\",\"path\":[\"bare_metal\",\"disk\"]},\"_p_bare_metal.main_ip\":{\"ret_value\":\"text\",\"caption\":\"bare_metal main_ip\",\"sample_value\":\"95.179.156.214\",\"path\":[\"bare_metal\",\"main_ip\"]},\"_p_bare_metal.cpu_count\":{\"ret_value\":\"number\",\"caption\":\"bare_metal cpu_count\",\"sample_value\":4,\"path\":[\"bare_metal\",\"cpu_count\"]},\"_p_bare_metal.region\":{\"ret_value\":\"text\",\"caption\":\"bare_metal region\",\"sample_value\":\"ams\",\"path\":[\"bare_metal\",\"region\"]},\"_p_bare_metal.date_created\":{\"ret_value\":\"text\",\"caption\":\"bare_metal date_created\",\"sample_value\":\"2022-03-25T16:33:57+00:00\",\"path\":[\"bare_metal\",\"date_created\"]},\"_p_bare_metal.status\":{\"ret_value\":\"text\",\"caption\":\"bare_metal status\",\"sample_value\":\"pending\",\"path\":[\"bare_metal\",\"status\"]},\"_p_bare_metal.netmask_v4\":{\"ret_value\":\"text\",\"caption\":\"bare_metal netmask_v4\",\"sample_value\":\"255.255.254.0\",\"path\":[\"bare_metal\",\"netmask_v4\"]},\"_p_bare_metal.gateway_v4\":{\"ret_value\":\"text\",\"caption\":\"bare_metal gateway_v4\",\"sample_value\":\"95.179.156.1\",\"path\":[\"bare_metal\",\"gateway_v4\"]},\"_p_bare_metal.plan\":{\"ret_value\":\"text\",\"caption\":\"bare_metal plan\",\"sample_value\":\"vbm-4c-32gb\",\"path\":[\"bare_metal\",\"plan\"]},\"_p_bare_metal.v6_network\":{\"ret_value\":\"text\",\"caption\":\"bare_metal v6_network\",\"sample_value\":\"2001:19f0:5001:28ab::\",\"path\":[\"bare_metal\",\"v6_network\"]},\"_p_bare_metal.v6_main_ip\":{\"ret_value\":\"text\",\"caption\":\"bare_metal v6_main_ip\",\"sample_value\":\"2001:19f0:5001:28ab:0ec4:7aff:fe8e:f9ed\",\"path\":[\"bare_metal\",\"v6_main_ip\"]},\"_p_bare_metal.v6_network_size\":{\"ret_value\":\"number\",\"caption\":\"bare_metal v6_network_size\",\"sample_value\":64,\"path\":[\"bare_metal\",\"v6_network_size\"]},\"_p_bare_metal.label\":{\"ret_value\":\"text\",\"caption\":\"bare_metal label\",\"sample_value\":\"Example Bare Metal\",\"path\":[\"bare_metal\",\"label\"]},\"_p_bare_metal.tag\":{\"ret_value\":\"text\",\"caption\":\"bare_metal tag\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"tag\"]},\"_p_bare_metal.mac_address\":{\"ret_value\":\"number\",\"caption\":\"bare_metal mac_address\",\"sample_value\":14038009313773,\"path\":[\"bare_metal\",\"mac_address\"]},\"_p_bare_metal.os_id\":{\"ret_value\":\"number\",\"caption\":\"bare_metal os_id\",\"sample_value\":186,\"path\":[\"bare_metal\",\"os_id\"]},\"_p_bare_metal.app_id\":{\"ret_value\":\"number\",\"caption\":\"bare_metal app_id\",\"sample_value\":3,\"path\":[\"bare_metal\",\"app_id\"]},\"_p_bare_metal.image_id\":{\"ret_value\":\"text\",\"caption\":\"bare_metal image_id\",\"sample_value\":\"\",\"path\":[\"bare_metal\",\"image_id\"]},\"_p_bare_metal.features\":{\"ret_value\":\"list.text\",\"caption\":\"bare_metal features\",\"sample_value\":\"ipv6\",\"path\":[\"bare_metal\",\"features\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]",
+            "url_params": {
+                "AAQ": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAT": {
+            "initialized": true,
+            "method": "get",
+            "name": "Bare Metal IPv4 Addresses",
+            "publish_as": "data",
+            "rank": 8,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAT",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAT\":{\"caption\":\"Bare Metal IPv4 Addresse\",\"fields\":{\"_p_ipv4s\":{\"ret_value\":\"list.api.1648224112234x903820035073245200.plugin_api.AAT.ipv4s\",\"caption\":\"ipv4s\",\"path\":[\"ipv4s\"]},\"_p_meta.total\":{\"ret_value\":\"number\",\"caption\":\"meta total\",\"sample_value\":1,\"path\":[\"meta\",\"total\"]},\"_p_meta.links.next\":{\"ret_value\":\"text\",\"caption\":\"meta links next\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"next\"]},\"_p_meta.links.prev\":{\"ret_value\":\"text\",\"caption\":\"meta links prev\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"prev\"]}}},\"plugin_api.AAT.ipv4s\":{\"caption\":\"Bare Metal IPv4 Addresses ipv4\",\"fields\":{\"_p_ip\":{\"ret_value\":\"text\",\"caption\":\"ip\",\"sample_value\":\"95.179.156.214\",\"path\":[\"ip\"]},\"_p_netmask\":{\"ret_value\":\"text\",\"caption\":\"netmask\",\"sample_value\":\"255.255.254.0\",\"path\":[\"netmask\"]},\"_p_gateway\":{\"ret_value\":\"text\",\"caption\":\"gateway\",\"sample_value\":\"95.179.156.1\",\"path\":[\"gateway\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"main_ip\",\"path\":[\"type\"]},\"_p_reverse\":{\"ret_value\":\"text\",\"caption\":\"reverse\",\"sample_value\":\"95.179.156.214.vultrusercontent.com\",\"path\":[\"reverse\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/ipv4",
+            "url_params": {
+                "AAU": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAV": {
+            "initialized": true,
+            "method": "get",
+            "name": "Bare Metal IPv6 Addresses",
+            "publish_as": "data",
+            "rank": 9,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAV",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAV\":{\"caption\":\"Bare Metal IPv6 Addresse\",\"fields\":{\"_p_ipv6s\":{\"ret_value\":\"list.api.1648224112234x903820035073245200.plugin_api.AAV.ipv6s\",\"caption\":\"ipv6s\",\"path\":[\"ipv6s\"]},\"_p_meta.total\":{\"ret_value\":\"number\",\"caption\":\"meta total\",\"sample_value\":1,\"path\":[\"meta\",\"total\"]},\"_p_meta.links.next\":{\"ret_value\":\"text\",\"caption\":\"meta links next\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"next\"]},\"_p_meta.links.prev\":{\"ret_value\":\"text\",\"caption\":\"meta links prev\",\"sample_value\":\"\",\"path\":[\"meta\",\"links\",\"prev\"]}}},\"plugin_api.AAV.ipv6s\":{\"caption\":\"Bare Metal IPv6 Addresses ipv6\",\"fields\":{\"_p_ip\":{\"ret_value\":\"text\",\"caption\":\"ip\",\"sample_value\":\"2001:19f0:5001:28ab:0ec4:7aff:fe8e:f9ed\",\"path\":[\"ip\"]},\"_p_network\":{\"ret_value\":\"text\",\"caption\":\"network\",\"sample_value\":\"2001:19f0:5001:28ab::\",\"path\":[\"network\"]},\"_p_network_size\":{\"ret_value\":\"number\",\"caption\":\"network_size\",\"sample_value\":64,\"path\":[\"network_size\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"main_ip\",\"path\":[\"type\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/ipv6",
+            "url_params": {
+                "AAW": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAX": {
+            "method": "post",
+            "name": "Start Bare Metal",
+            "publish_as": "data",
+            "rank": 10,
+            "should_reinitialize": true,
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/start",
+            "url_params": {
+                "AAY": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAb": {
+            "data_type": "empty",
+            "initialized": true,
+            "method": "post",
+            "name": "Halt Bare Metal",
+            "no_types": true,
+            "publish_as": "data",
+            "rank": 11,
+            "should_reinitialize": true,
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/halt",
+            "url_params": {
+                "AAc": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAd": {
+            "initialized": true,
+            "method": "get",
+            "name": "Bare Metal Bandwidth",
+            "publish_as": "data",
+            "rank": 12,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAd",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAd\":{\"caption\":\"Bare Metal Bandwidth\",\"fields\":{}}}",
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/bandwidth",
+            "url_params": {
+                "AAe": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAf": {
+            "data_type": "empty",
+            "initialized": true,
+            "method": "post",
+            "name": "Reboot Bare Metal",
+            "no_types": true,
+            "publish_as": "data",
+            "rank": 13,
+            "should_reinitialize": true,
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/reboot",
+            "url_params": {
+                "AAg": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAh": {
+            "data_type": "empty",
+            "initialized": true,
+            "method": "post",
+            "name": "Reinstall Bare Metal",
+            "no_types": true,
+            "publish_as": "data",
+            "rank": 14,
+            "should_reinitialize": true,
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/reinstall",
+            "url_params": {
+                "AAi": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAj": {
+            "data_type": "empty",
+            "initialized": true,
+            "method": "delete_method",
+            "name": "Delete Bare Metal",
+            "no_types": true,
+            "publish_as": "data",
+            "rank": 15,
+            "should_reinitialize": true,
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]",
+            "url_params": {
+                "AAk": {
+                    "doc": "",
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAm": {
+            "body": "{\n    \"baremetal_ids\": [\n        \"1a0eabc5-65b3-4866-a9c1-1f8302ee7e84\"\n    ]\n}",
+            "data_type": "empty",
+            "headers": {
+                "0": {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Halt Bare Metals - More Then One",
+            "no_types": true,
+            "publish_as": "data",
+            "rank": 16,
+            "should_reinitialize": true,
+            "url": "https://api.vultr.com/v2/bare-metals/halt"
+        },
+        "AAn": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get Bare Metal User Data",
+            "publish_as": "data",
+            "rank": 17,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAn",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAn\":{\"caption\":\"Get Bare Metal User Data\",\"fields\":{\"_p_user_data.data\":{\"ret_value\":\"text\",\"caption\":\"user_data\",\"sample_value\":\"\",\"path\":[\"user_data\",\"data\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/user-data",
+            "url_params": {
+                "AAo": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAp": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get Available Bare Metal Upgrades",
+            "publish_as": "data",
+            "rank": 18,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAp",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAp\":{\"caption\":\"Get Available Bare Metal Upgrade\",\"fields\":{\"_p_upgrades.applications\":{\"ret_value\":\"list.api.1648224112234x903820035073245200.plugin_api.AAp.upgrades.applications\",\"caption\":\"upgrades applications\",\"path\":[\"upgrades\",\"applications\"]},\"_p_upgrades.os\":{\"ret_value\":\"list.api.1648224112234x903820035073245200.plugin_api.AAp.upgrades.os\",\"caption\":\"upgrades os\",\"path\":[\"upgrades\",\"os\"]}}},\"plugin_api.AAp.upgrades.applications\":{\"caption\":\"Get Available Bare Metal Upgrades upgrades application\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":39,\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"LEMP\",\"path\":[\"name\"]},\"_p_short_name\":{\"ret_value\":\"text\",\"caption\":\"short_name\",\"sample_value\":\"lemp\",\"path\":[\"short_name\"]},\"_p_deploy_name\":{\"ret_value\":\"text\",\"caption\":\"deploy_name\",\"sample_value\":\"LEMP on CentOS 7 x64\",\"path\":[\"deploy_name\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"one-click\",\"path\":[\"type\"]},\"_p_vendor\":{\"ret_value\":\"text\",\"caption\":\"vendor\",\"sample_value\":\"vultr\",\"path\":[\"vendor\"]},\"_p_image_id\":{\"ret_value\":\"text\",\"caption\":\"image_id\",\"sample_value\":\"\",\"path\":[\"image_id\"]}}},\"plugin_api.AAp.upgrades.os\":{\"caption\":\"Get Available Bare Metal Upgrades upgrades o\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":167,\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"CentOS 7 x64\",\"path\":[\"name\"]},\"_p_arch\":{\"ret_value\":\"text\",\"caption\":\"arch\",\"sample_value\":\"x64\",\"path\":[\"arch\"]},\"_p_family\":{\"ret_value\":\"text\",\"caption\":\"family\",\"sample_value\":\"centos\",\"path\":[\"family\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/upgrades",
+            "url_params": {
+                "AAq": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        },
+        "AAr": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get VNC URL for a Bare Metal",
+            "publish_as": "data",
+            "rank": 19,
+            "ret_value": "api.1648224112234x903820035073245200.plugin_api.AAr",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAr\":{\"caption\":\"Get VNC URL for a Bare Metal\",\"fields\":{\"_p_vnc.url\":{\"ret_value\":\"text\",\"caption\":\"vnc url\",\"sample_value\":\"https://my.vultr.com/subs/baremetal/novnc/api.php?data=djJ8bDMwUmtaS1BfY3B2V0JuRUoyX3RyT3BsUGQ4NnFYZl98_DNIAVU-VLpP1tI8jylGRTrtIcV4r4jLybNdzvlONWmwMQ-BuBZZ1lcRVhUwxeo9UFiMeRyed_3PHkdypH9U112_78Y70XK4JR1x44hkl524BH9pbwHmlujTz035Cd9l_dANRJ4YxegEFU6qzDn79ofeGuznwHWQW1wJj_f2BXM7YWbkciMe1gOVbsiNWjLvaF9SSFa261zb1ZeluIbfrSt9NCS0_ayVNO87BIcY5-ZMmgVBFyDukf7oBTSKlUa_LTNSisUeSveiveM6kFmVOTINZ5Okom7ryrWtstOYeWccbNcUBK3AnfJQsUYNL1kLfvZOn73fqTRRvLuuAw3BPkpA226t2-LsXWoDkYSFk3W62MB2o6CyfKKvC1GIQK3HKgkO3Tck58GT2ZazjUtkkP-JmnQBm5dmuirIvq3XQQ\",\"path\":[\"vnc\",\"url\"]}}}}",
+            "url": "https://api.vultr.com/v2/bare-metals/[baremetal-id]/vnc",
+            "url_params": {
+                "AAs": {
+                    "key": "baremetal-id",
+                    "private": true,
+                    "value": "1a0eabc5-65b3-4866-a9c1-1f8302ee7e84"
+                }
+            }
+        }
+    },
+    "human": "Vultr Calls"
+}
